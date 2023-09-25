@@ -1,0 +1,116 @@
+<div class="container" style="background-color:#f6eff4; margin-top:40px">
+
+  <a class="navbar-item" style="background-color:#f6eff4;display: flex;justify-content: center;align-items: center;">
+    <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h2-logo-1.png" width="212" height="25">
+  </a>
+
+  <nav class="navbar has-shadow	" role="navigation" aria-label="main navigation"
+    style="background-color:#f6eff4;height:150px">
+    <div class="navbar-brand">
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu is-link"
+      style="display: flex;justify-content: center;align-items: center; font-family: Montserrat, sans-serif;">
+      <div class="navbar" style="background-color:#f6eff4;">
+
+        <div class="navbar-item has-dropdown is-hoverable mb-6">
+          <a class="navbar-item " routerLink="/home">
+            <strong>HOME</strong>
+          </a>
+          <div class="navbar-dropdown block">
+            <a class="navbar-item">
+              Standard
+            </a>
+            <a class="navbar-item">
+              Galery
+            </a>
+            <hr class="navbar-divider">
+          </div>
+        </div> 
+
+        <div class="navbar-item has-dropdown is-hoverable mb-6">
+          <a class="navbar-item " routerLink="/bouquets" (click)="onFetchItems()">
+            <strong>SHOP</strong>
+          </a>
+          <div class="navbar-dropdown block">
+            <a class="navbar-item">
+              Main home
+            </a>
+            <a class="navbar-item">
+              Grid home
+            </a>
+            <hr class="navbar-divider">
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable mb-6">
+          <a class="navbar-item " routerLink="/customize">
+            <strong>MAKE YOUR OWN BOUQUET</strong>
+          </a>
+          <div class="navbar-dropdown block">
+            <a class="navbar-item">
+              Main home
+            </a>
+            <a class="navbar-item">
+              Grid home
+            </a>
+            <hr class="navbar-divider">
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable mb-6">
+          <a class="navbar-item " routerLink="/cart">
+            <strong>CART</strong>
+          </a>
+          <div class="navbar-dropdown block">
+            <a class="navbar-item">
+              Main home
+            </a>
+            <a class="navbar-item">
+              Grid home
+            </a>
+            <hr class="navbar-divider">
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable mb-6">
+          <a class="navbar-item " routerLink="/new" *ngIf="isAuthenticated" (click)="onNewBouquet()">
+            <strong>PORTFOLIO</strong>
+          </a>
+          <div class="navbar-dropdown block">
+            <a class="navbar-item">
+              Main home
+            </a>
+            <a class="navbar-item">
+              Grid home
+            </a>
+            <hr class="navbar-divider">
+          </div>
+        </div>
+
+
+
+       
+
+        <div class="navbar-item has-dropdown is-hoverable mb-6">
+          <a class="navbar-item " routerLink="/auth" *ngIf="!isAuthenticated">
+            <strong>AUTHENTICATION</strong>
+          </a>
+        
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable mb-6">
+          <a class="navbar-item" *ngIf="isAuthenticated" (click)="onLogout()">
+          <strong> LOG OUT</strong> 
+          </a>
+        </div>
+
+      
+      </div>
+
+
+    </div>
+    
+  
+  </nav>
+</div>

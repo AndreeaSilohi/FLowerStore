@@ -1,0 +1,61 @@
+ <div class="row is-align-self-left">
+    <div class="col-xs-5">
+        <app-custom-bouquets-edit></app-custom-bouquets-edit>
+        <hr>
+        <ul class="list-group block is-justify-content-end is-clickable">
+
+            <div class="container">
+                <div id="dtext" class="notification is-primary is-justify-content-center is-italic"
+                    style="background-color:#F9AC67; width:340px;">In your <strong>customized</strong> bouquet you have:
+                </div>
+            </div>
+            <br>
+            <a id="it" class="list-group-item " style="cursor:pointer" *ngFor=" let flower of flowers">
+                {{flower.amount}} pcs of {{flower.flower|uppercase}} </a>
+            <hr>
+            <div>
+                <a id="cart" class="button is-small is-rounded" (class)="onAddToCart()">
+                    Add to cart
+                </a>
+            </div>
+
+        </ul>
+    </div> 
+
+
+   
+    <div class="col-xs-5 ">
+        </div>
+        <h4 style="color:rgb(129, 146, 44)">You may add:</h4>
+        <hr>
+        <label class="checkbox">
+            <input type="checkbox">
+            Ribbon
+        </label>
+
+        <br>
+
+        <label class="checkbox">
+            <input type="checkbox">
+            Pack
+        </label>
+
+        <br>
+
+        <label class="checkbox">
+            <input type="checkbox">
+            Paper box
+        </label>
+
+        <br>
+
+        <label class="checkbox">
+            <input type="checkbox">
+            Garland
+        </label>
+
+
+
+    </div>
+
+    <app-footer-shop></app-footer-shop>

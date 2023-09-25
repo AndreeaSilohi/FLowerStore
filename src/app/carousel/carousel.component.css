@@ -1,0 +1,17 @@
+.row{
+
+    background-image: url("https://i.postimg.cc/y6h7J5zz/Untitled.png");
+    margin-left: 20px;
+    margin-right: 20px;
+    height:400px;
+}
+
+img{
+    padding:5%;
+    height: 400px;
+}
+
+.col-md-8 {
+    display: flex;
+    justify-content: center;
+}

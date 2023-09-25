@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import '~ngx-toastr/toastr';
+
+.toast-container {
+    background-image: linear-gradient(rgba(12, 82, 63, 0),rgb(208, 155, 155)) !important;
+    
+    box-shadow: -5px 8px 16px 0px rgba(0,0,0,0.3) !important;
+    margin-bottom: 2px !important;
+  }
+  
+  
+  .toast-success{
+    background-image: none !important;
+  }
+  
+  .toast-success::after{
+    content: '\f00c' !important;
+    font-family: 'FontAwesome' !important;
+    position: absolute !important;
+    top: 14px !important;
+    left: 15px !important;
+    color: #333 !important;
+    font-size: 1.5em !important;
+  }
+  
+  

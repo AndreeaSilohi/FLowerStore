@@ -1,0 +1,20 @@
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&family=Playfair+Display&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat:wght@200;300;400;500;700&family=Playfair+Display&display=swap');
+
+
+ .awesome{
+    font-family: Playfair Display;
+    font-size:40px;
+    display:flex;
+    justify-content: center;
+   
+ }
+.flower {
+    margin-bottom: 100px;
+    padding:20px;
+    display:flex;
+    justify-content: center;
+    width:600px;
+}

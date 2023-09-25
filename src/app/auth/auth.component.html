@@ -1,0 +1,74 @@
+<div class="row" style="background-color: #f6eff4;line-height: 24px;font-size: 15px; ">
+    <h1 style="font-family: Playfair Display;font-size: 40px;margin-left: 120px;margin-top:30px">My Account</h1>
+    <br>
+    <h1 style="font-family:Lora;font-size: 15px; margin-left: 120px;">Where flowers are our inspiration</h1>
+</div>
+
+<br>
+<div class="row d-flex justify-content-center align-items-center">
+    <div class="card col col-md-10" style="border-radius: 1rem; padding:10px">
+        <div class="row"  style="padding-top:50px;padding-bottom:50px">
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-5 d-none d-md-block">
+                <p style="font-family: Playfair Display;font-size: 38px; margin-top:38px">Login</p>
+
+                <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading" class="container"
+                    >
+
+                    <div class="form-group" style=" font-family: Playfair Display;font-size: 20px; margin-top:30px">
+
+                        <label for="email">
+                            Username or email address *</label>
+
+                        <input type="email" id="email" class="form-control" ngModel name="email" required email />
+                    </div>
+
+
+                    <div class="form-group" style=" font-family: Playfair Display;font-size: 20px; margin-top:30px">
+
+                        <label for="password">Password *</label>
+
+                        <input type="password" id="password" class="form-control" ngModel name="password" required
+                            minlength="6" />
+                    </div>
+
+                    <div>
+                        <button class="button is-big" type="submit" [disabled]="!authForm.valid" style="margin-right:7px; background-color:#cf2e2e; color:white ;
+                            margin-top:30px">{{isLoginMode?'LOG
+                            IN':'Sign
+                            Up'}}
+                        </button>
+
+                        <button class="button  is-outlined" (click)="onSwitchMode()" type="button" style="margin-right:7px; background-color:#cf2e2e; color:white ;
+                            margin-top:30px">
+
+                            Switch to {{isLoginMode?'Sign Up':'LOG IN'}}
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <div class="col-md-5">
+                <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/blog-img-1-650x650.jpg"
+                    alt="">
+
+            </div>
+            <div class="col-md-1">
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+<app-footer-shop></app-footer-shop>

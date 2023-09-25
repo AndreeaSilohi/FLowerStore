@@ -1,0 +1,76 @@
+<div>
+  <h1 class="H1">Product List</h1>
+  <br>
+  <p class="P">Where flowers are our inspiration</p>
+</div>
+
+
+<div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <img style="width:118px;height:150.64px;margin-left: 50px;" [src]="bouquet.imagePath" alt="{{bouquet.name}} ">
+      <img style="width:118px;height:150.64px;margin-left: 50px;" [src]="bouquet.imagePath" alt="{{bouquet.name}} ">
+      <img style="width:118px;height:150.64px;margin-left: 50px;" [src]="bouquet.imagePath" alt="{{bouquet.name}} ">
+      <img style="width:118px;height:150.64px;margin-left: 50px;" [src]="bouquet.imagePath" alt="{{bouquet.name}} ">
+    </div>
+
+    <div class="col-md-4">
+      <img style="width:550px;height:662.58px" [src]="bouquet.imagePath" alt="{{bouquet.name}} ">
+    </div>
+
+    <div class="col-md-6">
+      <p class="P" style="margin-top:20px;  font-family: Playfair Display,serif;">{{bouquet.name}}</p>
+      <div>
+        <p class="P" style="color:#AFAFAF;font-size: 15px;">{{bouquet.price}}</p>
+
+      </div>
+
+
+
+      <br>
+      <div>
+        <p class="P">{{bouquet.description}}</p>
+      </div>
+
+      <br>
+
+      <div style="display:flex;">
+        <p class="ridge">Quantity</p>
+        <input [(ngModel)]= "input" id="quantity" style=" margin-left:5px;text-align: center;" type="number" min="1" max="100">
+        <button class="cart"(click)="onAddToCart()">ADD TO CART</button>
+      </div>
+      <br>
+
+      <div class="detail"style="margin-left:20px">
+      <div>
+        <p>SKU: 989873</p>
+      </div>
+    
+      <div>
+        <p>Categories: Exotic, Various</p>
+      </div>
+
+      <div>
+        <p>Tags: Llilies, Orchids</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="margin-top:20px;margin-left:30px">
+
+      
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+    <label style="border-radius: 0%;"class="btn btn-outline-danger" for="btnradio1" (click)="onDescription()">DESCRIPTION</label>
+
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+    <label class="btn btn-outline-danger" for="btnradio2" (click)="onAdditional()">ADDITIONAL INFORMATION</label>
+  
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+    <label style="border-radius: 0%;" class="btn btn-outline-danger" for="btnradio3"  (click)="onReview()">REVIEWS</label>
+  </div>
+  <router-outlet></router-outlet>
+  <hr>
+  </div>
+  <app-footer-shop ></app-footer-shop>
+</div>

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Playfair+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+
+h1{
+    margin-left:30px;
+    margin-top:20px;
+   
+    font-family: "Playfair Display",serif;
+    font-size:30px;
+}
+
+p{
+    margin-left:30px;
+    margin-top:20px;
+
+    font-family: "Lora",serif;
+}

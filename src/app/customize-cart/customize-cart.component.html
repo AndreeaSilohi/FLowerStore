@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="testbox" style="display:flex;justify-content:center;background-color:#f6eff4">
+        <form [formGroup]="bouquetForm" action="/" style="margin-top:20px;margin-bottom:20px">
+            <div class="banner">
+                <h1>Create your own bouquet</h1>
+            </div>
+            <div class="row">
+                <div class="formbold-mb-5 col-md-6">
+
+                    <label for="qusOne" class="formbold-form-label" style="margin-top:20px">
+
+                        What flowers do you choose for your bouquet?
+
+                    </label>
+
+
+                    <div class="container">
+
+                        <ul class="ks-cboxtags">
+
+                            <li>
+
+                                <input type="checkbox" id="checkboxOne" formControlName="roses-checkbox"
+                                    (ngModelChange)="change(1)">
+
+                                <label for="checkboxOne" style="width:150px;text-align: center;">
+                                 Roses 2$ <img src="https://cdn-icons-png.flaticon.com/512/765/765746.png"
+                                        style="width:30px;height:30px; margin-left: 15px;"></label>
+
+
+
+                                <input type="number" (ngModelChange)="calculateTotal($event,'roses')"
+                                    formControlName="roses-number" min="1" max="100" style="margin-left:60px;">
+
+                            </li>
+
+
+
+                            <li>
+
+                                <input type="checkbox" id="checkboxTwo" formControlName="tulips-checkbox"
+                                    (ngModelChange)="change(2)">
+
+
+
+                                <label for="checkboxTwo" style="width:150px;text-align: center;">
+
+                                    Tulips 10$
+
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2566/2566543.png"
+                                        style="width:30px;height:30px;margin-left: 15px;"></label>
+
+
+
+
+                                <input type="number" formControlName="tulips-number"
+                                    (ngModelChange)="calculateTotal($event,'tulips')" min="1" max="100"
+                                    style="margin-left:60px;">
+
+
+
+                            </li>
+
+
+
+
+
+                            <li>
+
+                                <input type="checkbox" formControlName="orchid-checkbox" id="checkboxThree"
+                                    (ngModelChange)="change(3)">
+
+                                <label for="checkboxThree" style="width:150px;text-align: center;">Orchid 32$
+
+                                    <img src="https://cdn-icons-png.flaticon.com/512/5130/5130666.png"
+                                        style="width:30px;height:30px;margin-left: 14px;"></label>
+
+                                <input type="number" formControlName="orchid-number"
+                                    (ngModelChange)="calculateTotal($event,'orchid')" min="1" max="100"
+                                    style="margin-left:60px;">
+
+
+
+                            </li>
+
+
+                            <li>
+
+                                <input type="checkbox" formControlName="lily-checkbox" id="checkboxFour" value="Lily"
+                                    (ngModelChange)="change(4)">
+
+                                <label for="checkboxFour" style="width:150px;text-align: center;">Lily 12$
+
+                                    <img src="https://cdn-icons-png.flaticon.com/512/8889/8889406.png"
+                                        style="width:30px;height:30px;margin-left: 30px;"></label>
+
+
+
+                                <input type="number" formControlName="lily-number"
+                                    (ngModelChange)="calculateTotal($event,'lily')" min="1" max="100"
+                                    style="margin-left:60px;">
+
+                            </li>
+
+                            <li>
+
+                                <input type="checkbox" formControlName="fresia-checkbox" id="checkboxFive"
+                                    value="Fresia" (ngModelChange)="change(5)">
+
+                                <label for="checkboxFive" style="width:150px;text-align: center;">Fresia 11$
+
+                                    <img src="https://cdn-icons-png.flaticon.com/512/5130/5130933.png"
+                                        style="width:30px;height:30px;margin-left: 15px;"></label>
+
+                                <input type="number" formControlName="fresia-number"
+                                    (ngModelChange)="calculateTotal($event,'fresia')" min="1" max="100"
+                                    style="margin-left:60px;">
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <br>
+
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+
+                        <label class="formbold-form-label" for="notes " style="margin-top:20px">Address:</label>
+
+                        <textarea type="text" class="form-control" formControlName="notes" rows="6"
+                            style="background-color:#e4e0f1;width:400px"></textarea>
+
+                    </div>
+                    <br>
+
+                    <label for="qusOne" class="formbold-form-label">
+
+                        Delivery method
+
+                    </label>
+
+                    <input type="radio" name="delivery-type" (click)="radioClick('pick-up')">
+
+                    <label for="pick-up" style="margin-right:20px">Pick up</label>
+
+                    <input type="radio" name="delivery-type" (click)="radioClick('delivery')">
+
+                    <label for="delivery">Delivery</label>
+
+                    <br>
+                    <label for="qusOne"
+                        style="margin-top:20px;background-color:rgb(158, 70, 151);padding:10px;color:white;border-radius: 1rem;">Total:
+                        {{sum}} $</label>
+
+
+                </div>
+
+                <div class="btn-block">
+                    <button type="submit" href="/" (click)="onAddToCart()">SUBMIT</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+<app-footer-shop></app-footer-shop>

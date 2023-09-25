@@ -1,0 +1,168 @@
+<div>
+    <h1>Cart</h1>
+    <h3>Where flowers are our inspiration</h3>
+</div>
+<div *ngIf="orders.length!==0;else cart" class="row">
+    <div style="padding-left: 50px; padding-right: 50px;">
+        <hr style=" border-bottom: 2px solid rgb(170, 128, 128); ">
+    </div>
+    <div class="row" style="padding-left:60px;">
+
+        <div class="col-md-4">
+            <p>PRODUCT</p>
+        </div>
+
+        <div class="col-md-2">
+
+            <p>PRICE</p>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <p>QUANTITY</p>
+
+        </div>
+
+        <div class="col-md-2">
+            <p>SUBTOTAL</p>
+
+        </div>
+
+
+    </div>
+    <div style="padding-left: 50px; padding-right: 50px;">
+        <hr style="border-bottom: 2px solid  rgb(170, 128, 128);">
+    </div>
+    <div class="row" style="padding-left:60px;margin-bottom:20px">
+
+        <div class="col-md-4" style="margin-bottom:20px">
+
+
+            <div class="list-group-item" *ngFor="let o of orders"
+                style=" width:70%;display:flex; align-items:center;justify-content: space-between;">
+
+                <h4>{{ o.bouquet.name }}</h4>
+                <img *ngIf="o.bouquet.imagePath!==''" src="{{ o.bouquet.imagePath }}" alt="{{ o.bouquet.name }}">
+
+            </div>
+        </div>
+
+        <div class="col-md-2" style="margin-bottom:20px">
+
+            <div class="list-group-item" *ngFor="let o of orders" style=" display:flex; align-items:center">
+
+                <h4 class="price" style="margin-bottom:40px">{{ o.bouquet.price }}</h4>
+
+
+
+            </div>
+        </div>
+
+
+        <div class="col-md-4" style="margin-bottom:20px">
+            <div class="list-group-item" *ngFor="let o of orders" style=" display:flex; align-items:center;padding:2px">
+
+
+                <h4 class="price" style="margin-bottom:40px">{{ o.bouquet.quantity }}</h4>
+
+
+
+            </div>
+
+
+        </div>
+
+        <div class="col-md-2" style="margin-bottom:20px">
+            <div class="list-group-item" *ngFor="let o of orders" style=" display:flex; align-items:center">
+
+
+                <h4 class="price" style="margin-bottom:40px">{{ getSubtotal(o.bouquet.price,o.bouquet.quantity)+" $"}}
+                </h4>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div style="margin-left:60px;margin-bottom:40px;margin-top:40px">
+
+        <input [(ngModel)]="coupon" placeholder="Coupon code" style=" margin-left:5px;text-align: center;">
+        <button class="coupon" (click)="onApplyCoupon()">APPLY COUPON</button>
+    </div>
+
+
+
+
+    <!-- <div class="row" style="padding-left:60px;margin-top:100px">
+        <div class="col-md-4" style="padding-left:60px;display:flex;">
+            <p>SUBTOTAL</p>
+        </div>
+
+        <div class="col-md-8">
+            <p>245$</p>
+        </div>
+        <div style="padding-left: 50px; padding-right: 50px;">
+            <hr style="border-bottom: 2px solid  rgb(170, 128, 128);">
+        </div>
+        <div>
+
+        </div>
+    </div> -->
+
+
+    <div class="row" style="padding-left:60px;margin-top:100px">
+        <div class="col-md-4" style="padding-left:60px;display:flex;">
+            <p>SHIPPING</p>
+        </div>
+
+        <div class="col-md-8">
+            <p>Enter your address to view shipping options.
+                Calculate shipping</p>
+        </div>
+        <div style="padding-left: 50px; padding-right: 50px;">
+            <hr style="border-bottom: 2px solid  rgb(170, 128, 128);">
+        </div>
+        <div>
+
+        </div>
+    </div>
+
+
+    <div class="row" style="padding-left:60px;">
+        <div class="col-md-4" style="padding-left:60px;display:flex;">
+            <p>TOTAL</p>
+        </div>
+
+        <div class="col-md-8">
+            <p> <strong>{{total}}</strong></p>
+        </div>
+        <div style="padding-left: 50px; padding-right: 50px;">
+            <hr style="border-bottom: 2px solid  rgb(170, 128, 128);">
+        </div>
+        <div>
+
+        </div>
+    </div>
+
+    <div style="display:flex;justify-content:left;padding-left:100px">
+        <button class="btn" type="submit" (click)="onSubmit()">Order</button>
+
+    </div>
+
+
+
+
+
+</div>
+
+
+
+<ng-template #cart>
+    <label class='empty'>Your cart is currently empty.</label>
+</ng-template>
+
+<app-footer-shop></app-footer-shop>

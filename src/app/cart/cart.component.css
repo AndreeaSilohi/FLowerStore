@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+
+img{
+    width:100px;
+    height:100px;
+    padding:10px;
+}
+
+h1{
+    color:#0E0E0E;
+    font-family: "Playfair Display",serif;
+    font-size:50px;
+    padding:5% 0% 0% 5%;
+}
+
+h3{
+    font-family: 'Lora', serif;
+    margin:8px 0px 0px ;
+    color:#6D6A6A;
+    padding:0% 0% 0% 5%;
+}
+
+.price:first-child {
+    margin-top: 44px;
+}
+
+
+.empty{
+    margin-left: 80px;
+    margin-top:20px;
+    font-family: "Playfair Display",serif;
+    font-size:25px;
+}
+
+p{
+    font-family: "Playfair Display",serif;
+}
+
+
+button{
+    width:100px;
+
+    border-color:bisque;
+    padding:5px;
+    height:60px;
+    width:200px;
+    background-color: #F34F3F;
+    color:white;
+}
+
+.coupon{
+    margin-left:5px;
+    background-color: #080808;
+    color:white;
+    padding:5px;
+    height:60px;
+    width:200px;
+  }
+  input{
+    height:60px;
+    width:200px;
+  }
+  

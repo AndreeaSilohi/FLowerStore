@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Playfair+Display&display=swap');
+img {
+margin:10px 10px 10px 10px;
+}
+
+li {
+  text-align: center;
+}
+.cart {
+  display: flex;
+  justify-content: center;
+}
+
+h1{
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  font-family: "Playfair Display",serif;
+  font-size: 50px;
+  margin-left:10px;
+  padding-left:30px;
+}
+
+.P{
+  
+  display: inline-block;
+  vertical-align: middle;
+  font-family: Lora,serif;
+  font-size: 17px;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #6d6a6a;
+  margin-left:10px;
+  margin-bottom:20px;
+  padding-left:30px;
+}
+
+
+.ridge {
+  border-style: groove;
+  width:200px;
+  height:52px;
+  margin-left:40px;
+  padding:10px;
+ 
+
+  
+}
+.cart{
+  margin-left:5px;
+  background-color: #080808;
+  color:white;
+  padding:14px 42px;
+  height:52px;
+}
+
+
+.detail{
+  margin-left:20px;
+  padding-left:30px;
+  font-family: Montserrat,sans-serif;
+  font-size:12px;
+}
+
+
+.btn-group{
+  flex:0.5;
+}

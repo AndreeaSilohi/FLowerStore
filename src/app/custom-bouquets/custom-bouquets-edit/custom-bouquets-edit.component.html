@@ -1,0 +1,51 @@
+<div class="row content">
+
+
+  <form>
+    <div class="row">
+      <div class="col-sm-12 form-group">
+        <label class="label is-small" for="name">Name the flower</label>
+      </div>
+
+      <div class="col-sm-12 form-group">
+        <input class="input is-primary is-rounded is-small" type="text" placeholder="Add the name of the flower" style="width:500px"
+          #nameInput>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-12 form-group">
+        <label class="label is-small" for="amount">Number of
+          flowers</label>
+      </div>
+      <div class="col-sm-12 form-group">
+        <input class="input is-info is-rounded is-small" type="text" placeholder="Add number of pieces"
+          style="width:500px" #amountInput>
+      </div>
+
+    </div>
+    <hr>
+    <div class="field is-grouped is-grouped-centered">
+      <p class="control">
+        <a class="button is-primary is-small is-rounded" (click)="onAddFlower()">
+          Add to your bouquet
+        </a>
+
+
+      </p>
+      <p>
+        <a class="button is-danger is-small is-rounded">
+          Delete flower
+        </a>
+      </p>
+
+    </div>
+
+
+
+  </form>
+
+
+
+</div>

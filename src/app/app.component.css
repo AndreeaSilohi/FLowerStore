@@ -1,0 +1,26 @@
+
+body {
+
+    background-image: url("https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h2-page-background-img.jpg");
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    background-size:cover;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+  }
+
+  .col-md-10{
+    background-color:#f6eff4;
+    height:100%;
+    padding:0;
+
+  }
+
+ 

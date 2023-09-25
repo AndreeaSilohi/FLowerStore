@@ -1,0 +1,5 @@
+<div class="row">
+    <div *ngFor="let bouquetElement of bouquets; let i = index" class="col-md-3">
+        <app-bouquet-item [bouquet]="bouquetElement" [index]="i"></app-bouquet-item>
+    </div>
+</div>
